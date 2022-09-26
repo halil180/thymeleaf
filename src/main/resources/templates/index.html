@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p th:text="${text}"></p>
+<h1 th:text="${time}"></h1>
+
+
+<table th:if="${students.size() > 0 }">
+    <tr th:each="student: ${students}">
+        <td th:text="${student.getFirstName()}"></td>
+        <td th:text="${student.getLastName()}"></td>
+
+    </tr>
+</table>
+
+<p th:else="${students.size() > 0 }">No Students</p>
+
+</body>
+</html>
